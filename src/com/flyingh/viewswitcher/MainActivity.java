@@ -106,6 +106,8 @@ public class MainActivity extends Activity {
 		if (screenNo > 0) {
 			--screenNo;
 			GridView gridView = (GridView) viewSwitcher.getNextView();
+			viewSwitcher.setInAnimation(this, android.R.anim.slide_in_left);
+			viewSwitcher.setOutAnimation(this, android.R.anim.slide_out_right);
 			gridView.setAdapter(adapter);
 			viewSwitcher.showPrevious();
 		}
